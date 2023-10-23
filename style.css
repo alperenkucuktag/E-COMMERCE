@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&family=Anton&family=Gugi&family=Lato:wght@100;300;400;700;900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sofia&display=swap');
+/* all */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:linear-gradient(rgba(104, 147, 207, 0.5),rgb(9, 48, 133));
+
+}
+
+/* Body */
+body{
+    font-family: "Poppins";
+}
+
+/* Header */
+header{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    background:linear-gradient(rgba(19, 102, 219, 0),rgb(9, 48, 133));
+}
+
+header h1{
+    text-shadow: 0 0 30px whitesmoke;
+    color: rgb(253, 254, 255);
+}
+
+header input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: aqua;
+    
+}
+::placeholder{
+  color: white;
+}
+
+
+
+header div{
+    display: flex;
+    gap: 10px;
+
+
+}
+header div button{
+    padding: 9px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: scale 300ms;
+    
+    
+}
+
+
+header div button:nth-child(1){
+    background:linear-gradient(rgba(171, 199, 239, 0.5),rgb(162, 196, 88));
+}
+header div button:nth-child(2){
+    background:linear-gradient(rgba(171, 199, 239, 0.5),rgb(107, 215, 237));
+}
+header div button:nth-child(3){
+    background:linear-gradient(rgba(171, 199, 239, 0.5),rgb(66, 245, 123));
+}
+/* kategori */
+section{
+    padding: 10px;
+
+}
+
+.categories{
+    background:linear-gradient(rgba(19, 102, 219, 0.5),rgb(9, 48, 133));
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin-top: 40px;
+    gap: 10px;
+    
+}
+.category-card{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(20, 20, 20, 0.231);
+
+}
+.category-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .category-card p {
+    position: absolute;
+    bottom: 10px;
+    background: white;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px black;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 140px;
+    margin-top: 40px;
+   
+   
+ 
+
+
+  }
+ 
+  @media (max-width: 1100px) {
+    .products {
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+  
+  .card {
+    max-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+      rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+      rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px,
+      rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card .action {
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+  }
+  .card .action span {
+    color: rgb(255, 253, 253);
+  }
+  
+  .card .action button {
+    background:linear-gradient(rgba(171, 199, 239, 0.5),rgb(107, 215, 237));
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-family: 'poppins';
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+    transition: scale 300ms;
+  }
+  
+  .card .action button:hover {
+    scale: 0.96;
+  }
+  
+  /* Sepet */
+  
+  .modal-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(128, 128, 128, 0.4);
+    display: none;
+    place-items: center;
+  }
+  
+  .active {
+    display: grid;
+  }
+  
+  .modal {
+    
+    width: 70%;
+    height: 60%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .modal #icon {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .modal #icon img {
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .modal #icon img:hover {
+    scale: 0.87;
+  }
+  .modal #Sepetlist {
+    display: flex;
+    flex-wrap: wrap;
+    /* bütün alanı kaplamasını sağlar */
+    flex-grow: 1;
+    /* elemanlar sınırın dışına çıkarsa scroll ekle */
+    overflow: auto;
+    gap:30px;
+    padding: 14px;
+  
+  }
+  .modal #Sepetlist .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .modal #Sepetlist .item img {
+    width: 100px;
+    border-radius: 7px;
+  }
+
+  .item .price {
+    color: rgb(255, 248, 248);
+  }
+
+  .modal #Sepetlist .item #delete {
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .modal #delete:hover {
+    transform: rotate(15deg);
+  }
+  
+  .modal #Toplam {
+    text-align: center;
+  }
+  .modal #Toplam span {
+    color: rgb(230, 231, 230);
+    font-weight: bold;
+  }
+

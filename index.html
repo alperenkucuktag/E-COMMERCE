@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header class="row"data-aos="fade-down"data-aos-delay="50">
+      <h1 class="events-title" data-aos="fade-right" data-aos-delay="300">E-Commerce</h1>
+      <input type="text" placeholder="Lütfen ürün girin" onfocus="removePlaceholder(this)" />
+
+      <div>
+        <button id="sepet" class="row"data-aos="fade-down"data-aos-delay="50" class="btn" data-tilt data-tilt-max="30" data-tilt-scale="0.8">Sepet</button>
+        <button class="row"data-aos="fade-down"data-aos-delay="50" class="btn" data-tilt data-tilt-max="30" data-tilt-scale="0.8">Kayıt</button>
+        <button class="row"data-aos="fade-down"data-aos-delay="50" class="btn" data-tilt data-tilt-max="30" data-tilt-scale="0.8">Giriş</button>
+      </div>
+    </header>
+
+    <!-- MAİN -->
+    <main>
+      <!-- Kategoriler -->
+      <section class="kategori-sec" class="row"data-aos="fade-down"data-aos-delay="50">
+        <h1 style="color: white;">Kategoriler</h1>
+        <div class="categories" class="row"data-aos="fade-down"data-aos-delay="50"></div>
+      </section>
+      <!-- ÜRÜNLER -->
+      <section>
+        <h1 style="color:white;" class="row"data-aos="fade-down"data-aos-delay="50">Ürünler</h1>
+        <div class="products"></div>
+      </section>
+      <div class="modal-wrapper"class="row"data-aos="fade-down"data-aos-delay="50">
+        <div class="modal"class="row"data-aos="fade-down"data-aos-delay="50">
+          <div id="icon">
+            <img id="kapatBtn" src="/images/e-close.png" class="btn" data-tilt data-tilt-max="30" data-tilt-scale="0.8" />
+          </div>
+          <div id="Sepetlist" class="row"data-aos="fade-down"data-aos-delay="50"></div>
+          <p id="Toplam">
+            <span id="sayac">0</span> Toplam:
+
+            <span id="toplamFiyat">0</span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="commerce.js"></script>
+    
+  </body>
+</html>
